@@ -1,0 +1,40 @@
+<p>delete-warehouse works!</p>
+<div><a [routerLink]="['/back']">Go Back</a>
+    <router-outlet></router-outlet></div>
+<div><!-- the following form holds data from the database and use NGmodel to call a delete request-->
+    <h2>Delete Warehouse</h2>
+    <form (ngSubmit)="delete(); warehouseForm.reset" id="new-whouse" #warehouseForm>
+        <div class="form-group">
+            <label for="location">Warehouse Id</label>
+            <input  [(ngModel)]="warehouseToDelete.warehouse_id"  
+            name="location" 
+            class="form-control" 
+            id = "location" 
+            type ="text"
+            />
+        </div>
+        <div class="form-group">
+            <label for="name">Warehouse Name</label>
+            <input 
+            [(ngModel)]="warehouseToDelete.warehouse_name" 
+            name="name" 
+            class="form-control" 
+            id = "name" 
+            type ="text"
+            />
+        </div>
+        
+     
+      
+        <div></div>
+        <div><!-- Input Button-->
+            <input class="btn btn-primary submit-button" type="submit" value="Save"/>
+        </div>
+    </form>
+
+<div class="container-fluid">
+    <app-warehouse-list ></app-warehouse-list>
+</div>
+ 
+
+</div>

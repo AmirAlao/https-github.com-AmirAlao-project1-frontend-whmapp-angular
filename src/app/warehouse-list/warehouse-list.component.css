@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="warehouse-list.component.css">
+#warehouse_table{
+    background-color: #d4b90b7c;
+    
+}
+.box{
+ padding: 50px;
+ border: px;
+
+}
+.inner-page{
+    background-color: #f2f1ea7c;
+}

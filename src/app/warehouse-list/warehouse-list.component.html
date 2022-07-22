@@ -1,0 +1,23 @@
+<div class="inner-page"><div><a [routerLink]="['/back']">Go Back</a>
+    <router-outlet></router-outlet></div>
+<!--This from utizlizes ngmodel to mape the data from the back end into a table on the front end-->
+<div id="warehouse-list">
+    <h2>View All Warehouses</h2>
+    <table class="table table-bordered"  id="warehouse_table">
+        <caption>Table of Warehouses</caption>
+        <tr>
+            <th>Warehouse ID</th>
+            <th >Warehouse_name</th>
+            <th>Location</th>
+            <th>Size-sqft</th>
+        </tr>
+        <!--This from utizlizes ngmodel to mape the data from the back end into a table on the front end-->
+        <tr *ngFor="let warehouse of warehouseList">
+            <td>{{warehouse.warehouse_id}}</td>
+            <td>{{warehouse.warehouse_name}}</td>
+            <td>{{warehouse.warehouse_location}}</td>
+            <td>{{warehouse.warehouse_size}}</td>
+        </tr>
+    </table>
+</div></div>
+

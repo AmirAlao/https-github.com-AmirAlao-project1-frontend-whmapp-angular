@@ -1,0 +1,58 @@
+
+<div class="a"><a [routerLink]="['/back']">Go Back</a>
+    <router-outlet></router-outlet></div>
+<div>
+    <h2>Update Warehouse</h2>
+    <form (ngSubmit)="update(); warehouseForm.reset" id="new-whouse" #warehouseForm>
+        <div class="form-group">
+            <label for="location">Warehouse Id</label>
+            <input  [(ngModel)]="warehouseToUpdate.warehouse_id"  
+            name="location" 
+            class="form-control" 
+            id = "location" 
+            type ="text"
+            />
+        </div>
+        <div class="form-group">
+            <label for="name">Warehouse Name</label>
+            <input 
+            [(ngModel)]="warehouseToUpdate.warehouse_name" 
+            name="name" 
+            class="form-control" 
+            id = "name" 
+            type ="text"
+            />
+        </div>
+      <!--<div class="form-group">
+            <label for="name">Warehouse Location</label>
+            <input 
+            [(ngModel)]="warehouseToUpdate.warehouse_location" 
+            name="name" 
+            class="form-control" 
+            id = "name" 
+            type ="text"
+            />
+        </div>-->  
+
+     
+       <!--<div class="form-group">
+            <label for="size">Warehouse Size</label>
+            <input  [(ngModel)]="warehouseToUpdate.warehouse_size" 
+             name="size" 
+             class="form-control" 
+             id = "size" 
+             type ="number"
+             />
+        </div>--> 
+        <div></div>
+        <div>
+            <input class="btn btn-primary submit-button" type="submit" value="Save"/>
+        </div>
+    </form>
+
+<div class="container-fluid">
+    <app-warehouse-list ></app-warehouse-list>
+</div>
+ 
+
+</div>

@@ -1,0 +1,40 @@
+<div><a [routerLink]="['/back']">Go Back</a><!-- This is a routerlink to render the home component-->
+    <router-outlet></router-outlet></div>
+<div><!--This from utizlizes ngmodel to mape the data from the back end into a table on the front end-->
+    <h2>Add Warehouse</h2>
+    <form (ngSubmit)="save(); warehouseForm.reset" id="new-whouse" #warehouseForm>
+        <div class="form-group">
+            <label for="name">Warehouse Name</label>
+            <input 
+            [(ngModel)]="warehouseToSave.warehouse_name" 
+            name="name" 
+            class="form-control" 
+            id = "name" 
+            type ="text"
+            />
+        </div>
+<!--This from utizlizes ngmodel to mape the data from the back end into a table on the front end-->
+        <div class="form-group">
+            <label for="location">Warehouse Location</label>
+            <input  [(ngModel)]="warehouseToSave.warehouse_location"  
+            name="location" 
+            class="form-control" 
+            id = "location" 
+            type ="text"
+            />
+        </div>
+        <!--This from utizlizes ngmodel to mape the data from the back end into a table on the front end-->
+        <div class="form-group">
+            <label for="size">Warehouse Size</label>
+            <input  [(ngModel)]="warehouseToSave.warehouse_size" 
+             name="size" 
+             class="form-control" 
+             id = "size" 
+             type ="number"
+             />
+        </div>
+        <div>
+            <input class="btn btn-primary submit-button" type="submit" value="Save"/>
+        </div>
+    </form>
+</div>

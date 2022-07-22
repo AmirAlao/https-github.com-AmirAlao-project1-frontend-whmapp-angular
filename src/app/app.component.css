@@ -1,0 +1,15 @@
+h1{
+    color: #e3915a;
+    text-align: center;
+    padding: 50px;
+    background-color: bisque;
+}
+h2{
+    color: #167080;
+}
+a.a {
+    position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  }
+ 
